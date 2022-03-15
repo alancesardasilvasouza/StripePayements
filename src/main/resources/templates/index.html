@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscribe to a cool new product</title>
+    <link rel="stylesheet" href="global.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+<form id="payment-form" th:action="@{/}" th:objetc="${storeItems}" method="POST" >
+    <p><b>BEM VINDO A INTEGRAÇÃO !!</b></p>
+    <p>Digita o nome do produto ou serviço</p>
+    <p>Produto : <span th:text="${storeItems.nameProduct}"></span> </p>
+    <p>valor : <span th:text="${storeItems.valor}"></span> </p>
+    <p><input type="submit"/></p>
+</form>
+</body>
+</html>
